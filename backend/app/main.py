@@ -65,3 +65,4 @@ async def websocket_endpoint(websocket: WebSocket, token: str = Query(...)):
         db.close()
 
     await handle_websocket_connection(websocket, user)
+

@@ -89,3 +89,4 @@ export interface AuthResponse {
   token_type: string;
   user: User;
 }
+

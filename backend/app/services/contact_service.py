@@ -60,3 +60,4 @@ def delete_contact(db: Session, owner_id: int, contact_id: int):
         )
     db.delete(contact)
     db.commit()
+

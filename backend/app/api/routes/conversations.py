@@ -202,3 +202,4 @@ async def remove_member(
         }, member_ids | {target_user_id})
 
     return {"message": "Member removed successfully"}
+

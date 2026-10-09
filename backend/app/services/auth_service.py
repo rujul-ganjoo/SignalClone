@@ -72,3 +72,4 @@ def authenticate_user(db: Session, req: LoginRequest) -> User:
     user.last_seen_at = datetime.now(timezone.utc)
     db.commit()
     return user
+

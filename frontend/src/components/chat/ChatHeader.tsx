@@ -102,3 +102,4 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
     </header>
   );
 };
+

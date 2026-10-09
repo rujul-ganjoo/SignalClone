@@ -170,3 +170,4 @@ export const MessageComposer: React.FC = () => {
     </div>
   );
 };
+

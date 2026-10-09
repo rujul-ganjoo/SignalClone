@@ -28,3 +28,4 @@ export const MessageStatus: React.FC<MessageStatusProps> = ({
       return <Check className={cn('w-3.5 h-3.5 text-white/75', className)} />;
   }
 };
+

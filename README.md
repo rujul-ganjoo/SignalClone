@@ -483,3 +483,4 @@ Access the application at `http://localhost:3000`.
 ## 17. Security Disclaimer
 
 This project is an **independent, educational demonstration clone** created for evaluation in the Scaler SDE Fullstack Assignment. It is not affiliated with, endorsed by, or connected to the Signal Technology Foundation. Plagiarism-free and original code has been written throughout the implementation.
+

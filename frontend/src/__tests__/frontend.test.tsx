@@ -50,3 +50,4 @@ describe('UI Components', () => {
     expect(screen.getByText('Alex Rivera')).toBeDefined();
   });
 });
+

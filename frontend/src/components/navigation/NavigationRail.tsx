@@ -118,3 +118,4 @@ export const NavigationRail: React.FC<NavigationRailProps> = ({
     </aside>
   );
 };
+

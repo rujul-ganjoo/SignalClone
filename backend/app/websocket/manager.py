@@ -47,3 +47,4 @@ class ConnectionManager:
             await self.send_personal_message(message, user_id)
 
 manager = ConnectionManager()
+

@@ -166,3 +166,4 @@ async def handle_websocket_connection(websocket: WebSocket, current_user: User):
         manager.disconnect(websocket, user_id)
     finally:
         db.close()
+

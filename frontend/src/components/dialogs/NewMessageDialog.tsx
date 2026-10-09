@@ -168,3 +168,4 @@ export const NewMessageDialog: React.FC<NewMessageDialogProps> = ({ isOpen, onCl
     </div>
   );
 };
+

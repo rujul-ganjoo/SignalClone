@@ -183,3 +183,4 @@ export const NewGroupDialog: React.FC<NewGroupDialogProps> = ({ isOpen, onClose 
     </div>
   );
 };
+

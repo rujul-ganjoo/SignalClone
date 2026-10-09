@@ -146,3 +146,4 @@ class Attachment(Base):
     created_at = Column(DateTime, default=utc_now)
 
     message = relationship("Message", back_populates="attachments")
+

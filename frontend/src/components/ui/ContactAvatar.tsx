@@ -66,3 +66,4 @@ export const ContactAvatar: React.FC<ContactAvatarProps> = ({
     </div>
   );
 };
+

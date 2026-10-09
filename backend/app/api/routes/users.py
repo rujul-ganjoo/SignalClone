@@ -67,3 +67,4 @@ def get_user_by_id(
     resp = UserResponse.model_validate(user)
     resp.is_online = manager.is_user_online(user.id)
     return resp
+

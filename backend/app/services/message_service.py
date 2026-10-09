@@ -218,3 +218,4 @@ def delete_message(db: Session, user_id: int, message_id: int):
     msg.deleted_at = now
     msg.content = "This message was deleted"
     db.commit()
+

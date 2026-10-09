@@ -42,3 +42,4 @@ def remove_contact(
 ):
     delete_contact(db, current_user.id, contact_id)
     return {"message": "Contact deleted successfully"}
+
