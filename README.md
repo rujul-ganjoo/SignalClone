@@ -460,15 +460,17 @@ Access the application at `http://localhost:3000`.
 ### Option 2: Cloud Deployment (Vercel + Render / Railway)
 1. **Backend on Render / Railway**:
    - Create a Web Service connected to the GitHub repository (Root directory: `backend`).
-   - Set start command: `sh -c "python seed.py && uvicorn app.main:app --host 0.0.0.0 --port $PORT"`
-   - Configure persistent volume if SQLite storage persistence across restarts is desired.
-   - Set environment variables (`SECRET_KEY`, `CORS_ORIGINS`).
+   - Railway uses the backend Dockerfile and binds to Railway's assigned `PORT`.
+   - For Railway, mount a persistent volume at `/data` and set `DATABASE_URL=sqlite:////data/signal.db` and `UPLOAD_DIR=/data/uploads`.
+   - Set `SECRET_KEY` to a long random value, `CORS_ORIGINS` to a JSON array containing the Vercel production origin, and `MOCK_OTP` as appropriate.
+   - Set `CORS_ORIGINS` as a JSON array, for example `["https://your-app.vercel.app"]`.
 2. **Frontend on Vercel**:
    - Import the repository (Root directory: `frontend`).
-   - Set build command: `npm run build`
+   - Use the Next.js framework preset and default build command (`npm run build`).
    - Set environment variables:
-     - `NEXT_PUBLIC_API_URL=https://your-backend-domain.com`
+     - `NEXT_PUBLIC_API_URL=https://your-backend-domain.com` (no trailing slash)
      - `NEXT_PUBLIC_WS_URL=wss://your-backend-domain.com/ws`
+   - After the Vercel production domain is assigned, add that exact origin to the backend's `CORS_ORIGINS` value and redeploy the backend.
 
 ---
 
@@ -483,4 +485,3 @@ Access the application at `http://localhost:3000`.
 ## 17. Security Disclaimer
 
 This project is an **independent, educational demonstration clone** created for evaluation in the Scaler SDE Fullstack Assignment. It is not affiliated with, endorsed by, or connected to the Signal Technology Foundation. Plagiarism-free and original code has been written throughout the implementation.
-
